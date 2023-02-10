@@ -1,0 +1,66 @@
+.search-items
+	margin-right: -15px
+	margin-left: -15px
+
+.search-page
+	.search-page-form
+		width: 60%
+		display: flex
+		justify-content: flex-between
+
+	.search-page-form-txt
+		flex-basis: 70%
+		padding: 10px
+		border: 1px solid #cccccc
+		border-radius: 2px
+		overflow: hidden
+		color: #ab8e58
+	.search-page-form-cat
+		flex-basis: 15%
+		padding: 10px
+		border: 1px solid #cccccc
+		border-radius: 2px
+		overflow: hidden
+		color: #777
+	.search-page-form-btn
+		flex-basis: 15%
+		padding: 10px
+		border: none
+		border-radius: 2px
+		overflow: hidden
+		background-color: darken($body, 20%)
+		color: #fff
+		cursor: pointer
+		transition: .25s ease
+		&:hover
+			background-color: $darck
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.search-page
+		.search-page-form
+			width: 80%
+// ≥992px
++media-breakpoint-down(md)
+	.search-page
+		.search-page-form
+			width: 85%
+// ≥768px
++media-breakpoint-down(sm)
+	.search-page
+		.search-page-form
+			width: 100%
+@media only screen and (max-width : 530px)
+	.search-page
+		.search-page-form-txt
+			flex-basis: auto
+			//flex-shrink: 2
+			flex-grow: 1
+		.search-page-form-btn
+			flex-basis: 70px
+			//flex-grow: 1
+
+@media only screen and (max-width : 400px)
+	.search-page
+		.search-page-form
+			display: none

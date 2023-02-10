@@ -1,0 +1,186 @@
+.list_wrap
+	width: 1140px
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 0 auto
+
+.catalog-section-item
+	width: calc(25% - 30px)
+	margin: 15px
+	box-sizing: border-box
+	background-color: #fff
+	overflow: hidden
+	padding: 15px
+	box-shadow: 0 0 1px rgba(122,122,122,.1)
+	border-bottom: 3px solid $accent
+	border-radius: 3px
+	transition: .25s ease
+	margin-bottom: 5px
+	cursor: pointer
+	transition: all .25s ease
+	&:hover
+		box-shadow: 0 0 2px rgba(122,122,122,.3)
+		.catalog-section-title a
+			color: $title
+		.catalog-section-img
+			filter: opacity(85%)
+
+.catalog-section-line
+	margin: 2px 15px 20px
+
+
+
+.catalog-section-img
+	width: 60%
+	position: relative
+	margin: 5px auto 10px auto
+	&:before
+		content: ''
+		display: block
+		padding-top: 100%
+.catalog-section-link
+	position: absolute
+	display: table-cell
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
+	img
+		width: auto
+		max-width: 100%
+		height: auto
+		max-height: 100%
+		margin: auto
+.catalog-section-title
+	text-transform: uppercase
+	text-align: center
+	line-height: 20px
+	font-size: .95em
+	overflow: hidden
+	a
+		width: 100%
+		display: block
+		color: $darck
+		transition: color .25s ease
+		&:hover
+			color: $darck
+			text-decoration: none
+
+
+.list_item
+	width: calc(25% - 30px)
+	margin: 15px
+	box-sizing: border-box
+	background-color: #fff
+	overflow: hidden
+	padding: 15px
+	box-shadow: 0 0 1px rgba(122,122,122,.1)
+	border-top: 7px solid $accent
+	border-radius: 3px
+	transition: .25s ease
+	//transition: filter .25s ease
+	&:hover
+		box-shadow: 0 0 2px rgba(122,122,122,.3)
+		.list_item-title a
+			color: $darck
+			text-decoration: none
+		.list_item-img-link
+			filter: opacity(85%)
+.list_item-img
+	width: 100%
+	position: relative
+	&:before
+		content: ''
+		display: block
+		padding-top: 100%
+.list_item-img-link
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	font-size: 0
+	background-repeat: no-repeat
+	background-size: 80% 80%
+	background-position: 50% 50%
+
+.list_item-title
+	text-transform: uppercase
+	text-align: center
+	line-height: 24px
+	font-size: 18px
+	height: 50px
+	overflow: hidden
+	border-bottom: 1px solid #e6e6e6
+	a
+		color: $title
+		transition: color .25s ease
+		&:hover
+			color: $darck
+			text-decoration: none
+
+.list_item-btn
+	transition: background .25s ease
+	text-transform: uppercase
+	display: block
+	letter-spacing: 1px
+	white-space: normal
+	background: $accent
+	padding: 10px
+	text-align: center
+	line-height: 20px
+	width: 100%
+	color: #fff
+	outline: none
+	border: none
+	font-size: 14px
+	border-radius: 3px
+	margin-top: 15px
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: $darck
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.list_wrap
+		width: 960px
+// ≥992px
++media-breakpoint-down(md)
+	.list_wrap
+		width: 720px
+	.list_item
+		width: calc(33.33% - 30px)
+// ≥768px
++media-breakpoint-down(sm)
+	.list_wrap
+		width: 540px
+	.list_item
+		width: calc(50% - 30px)
+	.catalog-section-title
+		font-size: .8em
+		line-height: 1.05
+		margin-bottom: 0
+// ≥576px
++media-breakpoint-down(xs)
+	.list_wrap
+		width: 100%
+@media only screen and (max-width : 500px)
+	.catalog-section-item
+		width: calc(50% - 30px)
+	.catalog-section-title
+		font-size: 1em
+		line-height: 1.1
+		margin-bottom: 3px
+	.catalog-section-line
+		margin: 20px 15px 10px 15px
+	.list_item
+		width: calc(50% - 30px)
+@media only screen and (max-width : 385px)
+	.list_item
+		width: 100%

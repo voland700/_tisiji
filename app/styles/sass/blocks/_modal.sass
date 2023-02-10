@@ -1,0 +1,109 @@
+.modal
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	outline: 0
+	background-color: rgba($darck, .8)
+	z-index: 101
+	display: none
+
+.modal__wrap
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	margin: auto
+	color: #555
+.modal__content
+	position: relative
+	display: block
+	max-width: 600px
+	height: auto
+	background-color: $body
+	border: 2px solid rgba($darck, .9)
+	border-radius: 5px
+	padding: 25px 15px
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+
+.mfeedback
+	input
+		width: 100%
+		margin-bottom: 5px
+	input, textarea
+		border: #ccc 1px solid
+	.mf-captcha
+		input
+			max-width: 180px
+	input[type=submit]
+		display: block
+		width: 180px
+		margin: 20px auto 5px auto
+		text-transform: uppercase
+		letter-spacing: 1px
+		white-space: normal
+		vertical-align: top
+		background: #807052
+		padding: 10px 8px
+		text-align: center
+		line-height: 18px
+		color: #fff
+		outline: 0
+		border: none
+		border-radius: 3px
+		font-weight: 400
+		cursor: pointer
+		transition: background-color .25s ease
+		&:hover
+			background-color: #BAA376
+.modal__content .mfeedback
+	input[type=submit].disabled
+		background-color: #a79d8a
+		cursor: auto
+
+.modal__closed
+	display: block
+	width: 30px
+	height: 30px
+	position: absolute
+	top: 3px
+	right: 10px
+	font-size: 1.7rem
+	line-height: 30px
+	text-align: center
+	font-weight: 600
+	color: rgba(54, 54, 54, 0.5)
+	cursor: pointer
+	transition: color .25s ease
+	&:hover
+		color: $accent
+
+@keyframes bounceInDown
+	from,
+	60%,
+	75%,
+	90%,
+	to
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+	0%
+		transform: translate3d(0, -3000px, 0)
+	60%
+		transform: translate3d(0, 25px, 0)
+	75%
+		opacity: 1
+		transform: translate3d(0, -10px, 0)
+	90%
+		transform: translate3d(0, 5px, 0)
+	to
+		transform: translate3d(0, 0, 0)
+.modalUp
+	animation-duration: 1s
+	animation-fill-mode: both
+	animation-name: bounceInDown

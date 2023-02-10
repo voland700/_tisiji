@@ -1,0 +1,149 @@
+footer
+	width: 100%
+	background-color: $darck
+	padding-top: 50px
+	padding-bottom: 70px
+	color: #c1c1c1
+	margin-top: 70px
+	h3
+		text-transform: uppercase
+		line-height: 24px
+		margin: 0 0 22px
+		display: block
+		font-weight: 700
+		font-size: 18px
+		color: #c1c1c1
+.foot-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+.foot_nav-list-catalog
+	width: 20%
+.foot_nav-list-dillir
+	width: 30%
+.foot_nav-list
+	padding-left: 0
+	list-style: none
+
+.foot_nav-item
+	margin: 0 0 6px
+	a
+		display: inline-block
+		padding: 0 0 0 17px
+		vertical-align: top
+		position: relative
+		transition: color .25s ease
+		color: $title
+		text-decoration: none
+		text-transform: uppercase
+		line-height: 17px
+		font-size: 14px
+		&:before
+			position: absolute
+			line-height: 18px
+			content: "\f054"
+			left: 0
+			top: 0
+			font-family: "fontawesome"
+			font-size: 12px
+		&:hover
+			color: #c1c1c1
+.foot_txt
+	width: 25%
+	padding: 0 15px
+	p
+		margin-top: -5px
+
+.foot_info
+	width: 25%
+	padding: 0 15px
+.foot_info-phone
+	position: relative
+	font-size: 24px
+	font-weight: 600
+	margin: -11px 0 7px 0
+	padding-bottom: 5px
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+	&:after
+		background: $title
+		margin: 0 0 0 -92px
+		position: absolute
+		width: 120px
+		content: ""
+		height: 1px
+		bottom: 0
+		left: 50%
+.foot_info-adress
+	//font-size: 12px
+	line-height: 1.2
+	font-style: italic
+
+.foot_info-mail
+.foot_info-socbtn
+	span
+		width: 40px
+		height: 40px
+		display: inline-block
+		transition: .25s ease
+		cursor: pointer
+
+	span:hover img
+		transition: all .3s ease
+		filter: invert(100%)
+
+#upbutton
+	display: none
+	width: 0
+	height: 0
+	border-left: 30px solid transparent
+	border-right: 30px solid transparent
+	border-bottom: 30px solid #5d5d5d
+	opacify: .4
+	cursor: pointer
+	bottom: 30px
+	right: 30px
+	cursor: pointer
+	position: fixed
+	z-index: 999
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+	.foot-wrap
+		justify-content: space-between
+	.foot_nav-list-catalog
+		width: 33%
+	.foot_nav-list-dillir
+		width: 33%
+	.foot_txt
+		display: none
+	.foot_info
+		width: 33%
+// ≥768px
++media-breakpoint-down(sm)
+	.foot-wrap
+		justify-content: space-around
+	.foot_nav-list-catalog
+		width: 50%
+	.foot_nav-list-dillir
+		display: none
+	.foot_info
+		width: 50%
+// ≥576px
++media-breakpoint-down(xs)
+	.foot_nav-list-catalog
+		width: 40%
+		margin-left: 30px
+	.foot_nav-list-dillir
+		display: none
+	.foot_info
+		width: 50%
+@media only screen and (max-width : 465px)
+	.foot_nav-list-catalog
+		display: none
+	.foot_info
+		width: 80%

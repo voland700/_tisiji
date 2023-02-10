@@ -1,0 +1,120 @@
+.mainproducts_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin-top: 50px
+	background-color: #fff
+	border-radius: 5px
+.mainproducts_item
+	width: calc(25% - 30px)
+	margin: 15px
+	box-sizing: border-box
+	border-top: 3px solid $accent
+	transition: .3s ease
+	&:hover
+		.mainproducts_title a
+			color: #353535
+		.mainproducts_item-img img
+			opacity: .9
+
+.mainproducts_item-img
+	width: 100%
+	height: auto
+	display: table
+	vertical-align: middle
+	text-align: center
+	margin: 0
+	padding-top: 20px
+	padding-bottom: 10px
+
+	img
+		width: auto
+		max-width: 180px
+		height: auto
+		max-height: 180px
+.mainproducts_title
+	transition: color .25s ease
+	border-bottom: 1px solid #e6e6e6
+	margin-bottom: 12px
+	height: 60px
+	a
+		width: 100%
+		display: block
+		color: $title
+		text-transform: uppercase
+		line-height: 24px
+		font-size: 18px
+		text-align: center
+		padding-bottom: 7px
+		transition: color 0.25s ease 0s
+		&:hover
+			text-decoration: none
+			color: $darck
+.mainproducts_btn
+	transition: background .25s ease
+	text-transform: uppercase
+	display: block
+	letter-spacing: 1px
+	white-space: normal
+	vertical-align: top
+	background: $accent
+	padding: 11px 10px
+	text-align: center
+	line-height: 20px
+	width: 100%
+	color: #fff
+	outline: none
+	border: none
+	font-weight: 700
+	font-size: 14px
+	border-radius: 3px
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: $darck
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.mainproducts_item-img
+		img
+			max-width: 200px
+			max-height: 200px
+// ≥992px
++media-breakpoint-down(md)
+	.mainproducts_item-img
+		img
+			max-width: 140px
+			max-height: 140px
+// ≥768px
++media-breakpoint-down(sm)
+	.mainproducts_item
+		width: calc(50% - 30px)
+	.mainproducts_item-img
+		img
+			max-width: 210px
+			max-height: 210px
+@media only screen and (max-width : 500px)
+	.mainproducts_item-img
+		img
+			max-width: 190px
+			max-height: 190px
+@media only screen and (max-width : 460px)
+	.mainproducts_item-img
+		img
+			max-width: 180px
+			max-height: 180px
+@media only screen and (max-width : 420px)
+	.mainproducts_item-img
+		img
+			max-width: 160px
+			max-height: 160px
+@media only screen and (max-width : 400px)
+	.mainproducts_item
+		width: calc(100% - 30px)
+	.mainproducts_item-img
+		img
+			max-width: 210px
+			max-height: 210px

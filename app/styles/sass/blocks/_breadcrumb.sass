@@ -1,0 +1,31 @@
+.title
+	font-size: 2rem
+	color: $darck
+	margin: 5px 0 5px 0
+.breadcrumb
+	margin-bottom: 25px
+.breadcrumb-list
+	list-style: none
+	padding-left: 0
+	line-height: 1.25
+	margin-bottom: 0
+.breadcrumb-item
+	display: inline-block
+	font-size: 1rem
+	color: lighten($darck, 15%)
+	a 
+		display: block
+		color: $darck
+		padding-right: 5px
+		transition: color .25s ease
+		i 
+			margin-left: 10px
+			font-size: .8em
+			color: lighten($darck, 35%)
+		&:hover
+			color: $accent
+			text-decoration: none
+
+@media only screen and (max-width : 768px)
+	.breadcrumb-list
+		line-height: 1.4

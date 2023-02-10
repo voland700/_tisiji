@@ -1,0 +1,136 @@
+.showcase_wrap
+	width: 100%
+	height: auto
+	margin-top: 50px
+.showcase_item
+	width: 100%
+	min-height: 450px
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	background-color: $darck
+.showcase_item-info
+	display: flex
+	width: 50%
+	padding: 40px 60px
+
+.showcase_item-info-wrap
+	width: 50%
+.showcase_item-title
+	text-transform: uppercase
+	position: relative
+	line-height: 28px
+	padding: 0 0 20px
+	margin: 0 0 22px
+	font-size: 24px
+	a
+		color: #fff
+		text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+		transition: color .25s ease
+		&:hover
+			color: lighten($title, 20%)
+			text-decoration: none
+
+	&:before
+		content: ""
+		background: #ab8e58
+		position: absolute
+		width: 186px
+		height: 2px
+		bottom: 0
+		left: 0
+.showcase_item-txt
+	color: #fff
+	margin: 0 0 38px 0
+	span
+		font-weight: 700
+		color: $accent
+.showcase_item-btn
+	min-width: 185px
+	transition: background .25s ease
+	text-transform: uppercase
+	display: inline-block
+	letter-spacing: 1px
+	white-space: normal
+	vertical-align: top
+	background: $accent
+	padding: 11px 10px
+	text-align: center
+	position: relative
+	line-height: 20px
+	min-width: 200px
+	color: #fff
+	outline: none
+	border: none
+	font-weight: 700
+	font-size: 14px
+	border-radius: 3px
+	&:hover
+		color: #fff
+		text-decoration: none
+		background: $darck
+.showcase_item-img
+	width: 50%		
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.showcase_item:nth-child(even)
+	.showcase_item-info
+		justify-content: flex-start
+		order: 2
+	.showcase_item-img
+		order: 1
+.showcase_item:nth-child(odd)
+	.showcase_item-info
+		justify-content: flex-end
+		order: 1
+	.showcase_item-img
+		order: 2
+
+.showcase_video
+	width: 90%
+	margin: 50px auto
+
+
+@media only screen and (max-width : 1800px)
+	.showcase_item-info-wrap
+		width: 55%
+@media only screen and (max-width : 1700px)
+	.showcase_item-info-wrap
+		width: 60%
+@media only screen and (max-width : 1600px)
+	.showcase_item-info-wrap
+		width: 65%
+@media only screen and (max-width : 1500px)
+	.showcase_item-info-wrap
+		width: 70%
+@media only screen and (max-width : 1400px)
+	.showcase_item-info-wrap
+		width: 75%
+@media only screen and (max-width : 1300px)
+	.showcase_item-info-wrap
+		width: 75%
+@media only screen and (max-width : 1200px)
+	.showcase_item-info-wrap
+		width: 80%
+@media only screen and (max-width : 768px)
+	.showcase_item
+		flex-wrap: wrap
+		height: auto
+	.showcase_item-info-wrap
+		width: 100%
+	.showcase_item-info
+		width: 100%
+	.showcase_item-img
+		width: 100%
+		height: 450px
+
+
+
+	.showcase_item:nth-child(odd)
+		.showcase_item-info
+			justify-content: flex-start
+			order: 2
+		.showcase_item-img
+			order: 1

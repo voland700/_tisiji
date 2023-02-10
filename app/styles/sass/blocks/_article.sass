@@ -1,0 +1,188 @@
+.article-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap	
+	margin-left: -10px
+	margin-right: -10px
+.article-list-item
+	width: calc(33.33% - 20px)
+	margin: 10px
+	box-sizing: border-box
+	position: relative
+	padding-bottom: 20px
+	cursor: pointer
+	transition: all .25s ease
+	p 
+		font-style: italic
+		line-height: 1.35
+	&:after 
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 50%
+		height: 2px
+		background-color: $title
+	&:hover
+		color: $title
+		a		 
+			color: $title
+		img 
+			filter: opacity(90%)
+
+.article-one-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap	
+
+
+.article-menu
+	width: 250px
+.article-menu-title
+	text-transform: uppercase
+	font-size: 15px
+	color: $title
+	font-weight: 600
+	margin: 0 0 11px
+	//padding: 0 20px
+	display: block
+.article-menu-list
+	padding: 0
+	li
+		list-style: none
+		font-weight: 500
+		margin-bottom: 5px
+	a 
+		padding: 0 
+		position: relative
+		color: $darck
+		transition: all .25s ease
+		i 
+			margin-right: 7px
+			font-weight: 600
+		&:hover
+			text-decoration: none
+			color: $accent
+
+
+
+
+.article-content
+	flex-basis: 70%
+	flex-grow: 2
+	img
+		border: 1px solid darken($body, 5%)
+		border-radius: 3px		
+.article-list-img
+	display: block
+	position: relative
+	width: 100%
+	margin-bottom: 5px
+	box-shadow: 0 0 1px rgba(122,122,122,.2)
+	box-sizing: border-box
+	border-radius: 3px
+	overflow: hidden
+	&:before
+		content: ''
+		display: block
+		padding-top: 55%	
+	img 
+		width: 100%
+		position: absolute
+		display: flex
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+	
+
+.article-list-title
+	font-size: 1.05rem
+	a 
+		display: block
+		color: $darck
+		&:hover 
+			text-decoration: none
+			color: $title
+
+.article-img
+	max-width: 300px
+	height: auto
+	float: left
+	margin-right: 20px
+
+.img-center-1
+	display: block
+	max-width: 500px
+	min-width: 300px
+	height: auto
+	margin: 25px auto
+
+.img_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	flex-wrap: wrap
+	margin: 25px 0
+	img
+		height: 100%
+		margin-bottom: 20px
+.img-flex-2
+	width: 350px
+
+.img-flex-3
+	width: 300px
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+	.article-menu
+		order: 2
+		padding-top: 25px
+		border-top: 1px solid $title
+	.article-content
+		width: 100%
+		order: 1
+// ≥768px
++media-breakpoint-down(sm)
+	.article-list-item
+		width: calc(50% - 20px)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+@media only screen and (max-width : 520px)
+	.article-img
+		float: none
+
+
+@media only screen and (max-width : 400px)
+	.article-list-item
+		width: 100%
+@media only screen and (max-width : 350px)
+	.img-center-1
+		width: 100%
+	.img-flex-2
+		width: 100%
+
+	.img-flex-3
+		width: 100%
