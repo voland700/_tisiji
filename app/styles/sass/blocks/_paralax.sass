@@ -1,17 +1,26 @@
 .paralax
 	width: 100%
-	background-image: url(../img/background/coock_morsoe.jpg)
-	background-attachment: inherit
+	position: relative
+	box-sizing: border-box
+	padding: 50px 0
+	height: 500px
+	display: flex
+	background-attachment: fixed
 	background-repeat: no-repeat
 	background-position: center center
 	background-size: cover
 	box-sizing: border-box
-	padding: 50px 0
-	height: 450px
-	display: flex
+
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		inset: 0
+		background: linear-gradient(to bottom right, rgba($darck, .1 ), rgba($accent, .1 ))
 .paralax-wrap
 	width: 600px
 	margin: auto
+	z-index: 5
 	h3
 		position: relative
 		text-transform: uppercase
@@ -39,7 +48,6 @@
 		color: #fff
 
 .paralax-btn
-
 
 	transition: background .25s ease
 	text-transform: uppercase
