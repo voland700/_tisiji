@@ -59,128 +59,152 @@ b, strong
 	background-size: cover
 	text-align: center
 
-
-
-
 .naw-wrap
 	display: flex
 	justify-content: space-between
 	align-items: flex-start
+	position: relative
 	width: 100%
 	height: 100px
 	color: #fff
-
 	background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
-.naw-logo
+
+
+.naw-btn
+	display: none
+.nav-mob-phone
+	display: none
+
+
+.logo
 	display: block
-	width: 130px
-	height: auto
-	margin: auto 30px auto 150px
-	order: 1
-.naw-logo-link
-	display: block
-	background-color: transparent
-	svg
-		display: flex
-		justify-content: center
-		use 
-			display: block
+	position: relative
+	width: 180px
+	height: 60px
+	margin-top: auto
+	margin-bottom: auto
+	margin-left: 50px
+.logo-link
+	display: flex
+	justify-content: space-around
+	align-content: center
+	color: #fff
+	text-decoration: none
+	transition: color .27s ease-out
+	&:hover,
+	&:focus
+		color: lighten($accent, 20%)
+		text-decoration: none
 		
+.logo_img_wrap
+	width: 60px
+	height: 60px
+.logo_img
+	width: 100%
+.logo_title_wrap
+	width: 100px
+	display: flex
+	flex-wrap: wrap
+	align-content: center
+.logo_title
+	width: 100%
+	text-align: right
+	font-size: 2rem
+	line-height: 2rem
+	font-weight: 600
+	letter-spacing: 3px
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
 
-		
 
-
-
-
-
-
-#logo :hover .logo-title
-		fill: lighten($accent, 25%)
-
+.logo_sub
+	width: 100%
+	text-align: right
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
 
 .nav-list
 	display: flex
-	flex-direction: row
-	height: 100%
-	width: auto
-	padding: 0
-	margin: 0
-	z-index: 10
-	order: 2
-.nav-mob-phone
-	order: 3
-.naw-btn
-	display: none
-	width: 40px
-	height: 25px
-	margin: auto 20px auto 0
-	z-index: 10
-	cursor: pointer
-	order: 4
+	list-style: none
+	height: 60px
+	margin-top: auto
+	margin-bottom: auto
 .nav-item
 	display: flex
-	list-style: none
-	font-size: 1.25rem
-	a
-		display: block
-		color: #fff
-		text-shadow: 1px 1px 1px rgba(43,56,62,.5)
-		padding: 28px 15px 7px 15px
-		margin: auto 0
-		transition: .3s
-		&:hover
-			text-decoration: none
-			color: lighten($accent, 25%)
-.nav-search
+	align-content: center
+	height: 100%	
+.nav-item_link
 	display: block
-	font-size: 1.25rem
+	padding: 0 20px
+	font-size: 1.2rem
+	line-height: 60px
+
+	color: #fff
 	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
-	padding: 28px 15px 7px 15px
-	margin: auto 50px auto 0
-	cursor: pointer
-	transition: .3s
-	order: 3
-	&:hover
-		color: lighten($accent, 25%)
-	i
-		margin-right: 7px
+	transition: color .27s ease-out
+	&:hover,
+	&:focus
+		color: lighten($accent, 20%)
+		text-decoration: none
+
+
+.nav-search	
+	display: flex
+	height: 60px
+	line-height: 60px
+	margin-top: auto
+	margin-bottom: auto	
+	margin-right: 40px
+	.fa-search
+		display: block
+		width: 60px
+		height: 60px
+		font-size: 1.3rem
+		line-height: 60px
+		text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+		cursor: pointer
+		transition: color .27s ease-out
+		&:hover,
+		&:focus
+			color: lighten($accent, 20%)
+			text-decoration: none
 .nav-search-phone
-	display: inline-block
-	margin-right: 30px
-	font-size: 1.2em
-	font-weight: 600
+	font-size: 1.3rem
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
+		
+.nav-search-txt
+	font-size: 1.2rem
+	display: none
+
 
 .search_wrap
-	display: none
 	position: absolute
 	top: 90px
-	right: 80px
+	right: 65px
 	box-sizing: border-box
 	border-radius: 2px
 	background: #fff
 	width: 450px
 	height: auto
-	box-shadow: 0 0 6px rgba(122,122,122,.8)
+	box-shadow: 0 0 6px rgba(122, 122, 122, 80%)
+
+
 .form-wrap
 	display: flex
 	justify-content: space-between
 	padding: 8px
-.search-form
+.search-input
 	flex-basis: 100%
 	padding: 10px
 	border: none
 	overflow: hidden
 	color: $accent
+	font-size: 1.1rem
 	&::-webkit-input-placeholder
 		color: $accent
 		font-style: italic
 	&::-moz-placeholder
 		color: $accent
 		font-style: italic
-.nav-mob-phone
-	display: none
-.search-btn
-	transition: background .25s ease
+.search-btn    
 	text-transform: uppercase
 	display: inline-block
 	letter-spacing: 1px
@@ -193,82 +217,16 @@ b, strong
 	line-height: 20px
 	width: 130px
 	color: #fff
-	outline: none
+	outline: 0
 	border: none
 	font-weight: 700
 	font-size: 14px
+	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
 	cursor: pointer
-	transition: .3s
-	&:hover
+	transition: background .25s ease
+	&:hover,
+	&:focus
 		background-color: $darck
-.youtube
-	width: 60%
-	margin-bottom: 20px
-	border: 5px solid darken($body, 5%)
-	border-radius: 2px
+		text-decoration: none
 
-	// ≥1200px
-+media-breakpoint-down(lg)
-	.naw-wrap
-		flex-wrap: wrap
-	.nav-search-phone
-		display: none
-	.nav-mob-phone
-		display: block
-		width: 100%
-		font-size: 1.5em
-		font-weight: 600
-		text-align-last: right
-		padding-right: 30px
-		order: 4
-		i
-			margin-right: 10px
-	.youtube
-		width: 80%
-
-@media only screen and (max-width : 920px)
-	.naw-btn
-		display: block
-	.nav-search
-		display: none
-	.search_wrap
-		display: block
-		position: relative
-		top: 0
-		left: 0
-		width: 100%
-		border-bottom: 2px solid darken($body, 10%)
-	.nav-list
-		display: none
-		position: absolute
-		top: 75px
-		right: 0
-		//width: 100%
-		margin: 0 20px 0 auto
-		border-radius: 5px
-	.nav-item
-		background-color: rgba($darck, .8)
-		a
-			padding: 10px 15px
-	.nav-mob-phone
-		display: block
-		width: auto
-		order: 2
-		margin: auto 0
-		padding: 0
-	.youtube
-		width: 100%
-@media only screen and (max-width : 545px)
-	.naw-logo
-		order: 1
-	.naw-btn
-		order: 2
-	.nav-mob-phone
-		width: 100%
-		text-align-last: left
-		padding-left: 30px
-		order: 3
-		i
-			display: none
-	.youtube
-		width: 100%
+	
