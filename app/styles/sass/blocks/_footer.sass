@@ -93,20 +93,34 @@ footer
 		transition: all .3s ease
 		filter: invert(100%)
 
-#upbutton
+.upbutton
 	display: none
 	width: 0
 	height: 0
 	border-left: 30px solid transparent
 	border-right: 30px solid transparent
 	border-bottom: 30px solid #5d5d5d
-	opacify: .4
+	opacify: 0
 	cursor: pointer
 	bottom: 30px
 	right: 30px
 	cursor: pointer
 	position: fixed
 	z-index: 999
+
+@keyframes show_up
+	0%
+		opacity: 0
+	100%
+		opacity: .4
+
+.upbutton.show
+	display: block
+	animation: show_up 2.5s forwards
+	transition: opacify .27s ease-out
+	&:hover
+		opacity: .8
+
 
 // ≥1200px
 +media-breakpoint-down(lg)

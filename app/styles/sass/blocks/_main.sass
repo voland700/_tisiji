@@ -95,7 +95,7 @@ b, strong
 	&:focus
 		color: lighten($accent, 20%)
 		text-decoration: none
-		
+
 .logo_img_wrap
 	width: 60px
 	height: 60px
@@ -130,13 +130,12 @@ b, strong
 .nav-item
 	display: flex
 	align-content: center
-	height: 100%	
+	height: 100%
 .nav-item_link
 	display: block
 	padding: 0 20px
 	font-size: 1.2rem
 	line-height: 60px
-
 	color: #fff
 	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
 	transition: color .27s ease-out
@@ -145,13 +144,14 @@ b, strong
 		color: lighten($accent, 20%)
 		text-decoration: none
 
-
-.nav-search	
+.nav-item_link.active
+	color: lighten($accent, 20%)
+.nav-search
 	display: flex
 	height: 60px
 	line-height: 60px
 	margin-top: auto
-	margin-bottom: auto	
+	margin-bottom: auto
 	margin-right: 40px
 	.fa-search
 		display: block
@@ -166,16 +166,21 @@ b, strong
 		&:focus
 			color: lighten($accent, 20%)
 			text-decoration: none
+	.fa-search.active
+		color: lighten($accent, 20%)
+
+
 .nav-search-phone
 	font-size: 1.3rem
 	text-shadow: 1px 1px 1px rgba(43,56,62,.5)
-		
+
 .nav-search-txt
 	font-size: 1.2rem
 	display: none
 
 
 .search_wrap
+	display: none
 	position: absolute
 	top: 90px
 	right: 65px
@@ -186,6 +191,8 @@ b, strong
 	height: auto
 	box-shadow: 0 0 6px rgba(122, 122, 122, 80%)
 
+.search_wrap.active
+	display: block
 
 .form-wrap
 	display: flex
@@ -204,7 +211,7 @@ b, strong
 	&::-moz-placeholder
 		color: $accent
 		font-style: italic
-.search-btn    
+.search-btn
 	text-transform: uppercase
 	display: inline-block
 	letter-spacing: 1px
@@ -229,4 +236,123 @@ b, strong
 		background-color: $darck
 		text-decoration: none
 
-	
+.youtube
+	width: 60%
+	margin-bottom: 20px
+	border: 5px solid darken($body, 5%)
+	border-radius: 2px
+
+@media only screen and (max-width : 1200px)
+	.logo
+		margin-left: 30px
+	.nav-search
+		margin-right: 20px
+	.nav-item_link
+		padding: 0 15px
+
+	.youtube
+			width: 70%
+@media only screen and (max-width : 1080px)
+	.logo
+		width: 160px
+		height: 50px
+	.logo_img_wrap
+		width: 50px
+		height: 50px
+	.logo_title_wrap
+		width: 90px
+	.logo_title
+		font-size: 1.75rem
+		line-height: 1.75rem
+	.logo_sub
+		font-size: .8rem
+	.nav-item_link
+		font-size: 1.1rem
+
+	.nav-search-phone
+		font-size: 1.2rem
+	.nav-search
+		.fa-search
+			font-size: 1.2rem
+	.search_wrap
+		right: 40px
+
+@media only screen and (max-width : 1000px)
+	.nav-item_link
+		font-size: 1.05rem
+		padding: 0 15px
+	.nav-search-phone
+		font-size: 1.1rem
+
+	.nav-search
+		.fa-search
+			font-size: 1.1rem
+
+@media only screen and (max-width : 992px)
+	.nav-list
+		display: none
+		position: absolute
+		top: 75px
+		right: 30px
+		height: auto
+		padding: 10px 0
+		border-radius: 5px
+		background-color: rgba($darck, .8)
+		z-index: 3
+	.nav-item_link
+		font-size: 1.1rem
+		line-height: 1.65
+		padding: 10px 20px
+
+	.nav-list.active
+		display: block
+
+	.nav-mob-phone
+		display: inline-block
+		height: 60px
+		font-size: 1.5rem
+		line-height: 60px
+		margin-top: auto
+		margin-bottom: auto
+
+		.fa-phone
+			margin-right: 5px
+
+	.nav-search
+		display: none
+
+	.naw-btn
+		display: block
+		margin-top: auto
+		margin-bottom: auto
+		margin-right: 30px
+
+	.search_wrap
+		display: block
+		position: relative
+		top: 0
+		left: 0
+		width: 100%
+		border-bottom: 2px solid darken($body, 10%)
+	.youtube
+			width: 90%
+@media only screen and (max-width : 576px)
+	.logo
+		width: 50px
+	.logo_title_wrap
+		display: none
+	.youtube
+			width: 100%
+@media only screen and (max-width : 440px)
+	.logo
+		margin-left: 20px
+	.naw-btn
+		margin-right: 20px
+	.nav-mob-phone
+		font-size: 1.4rem
+		.fa-phone
+			display: none
+
+@media only screen and (max-width : 380px)
+	.nav-mob-phone
+		font-size: 1.3rem
