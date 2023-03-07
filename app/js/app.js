@@ -243,26 +243,10 @@ document.querySelectorAll('.hidden-link').forEach(function(elem){
 		elem.addEventListener('click', function(link){
 			link.preventDefault();
 			url = link.currentTarget.getAttribute('data-link');
-
 			//document.location.replace(url);
 			window.open(url, '_blank');
-
-
 			//console.log(href);
 		});
 
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
