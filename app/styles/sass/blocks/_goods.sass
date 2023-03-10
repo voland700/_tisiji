@@ -67,8 +67,10 @@
 
 
 .goods_discrip-params
-	width: 470px
+	width: 490px
 	margin-left: 40px
+	font-size: 15px
+	line-height: 1.5
 .goods_params-title
 	display: inline-block
 	//text-transform: uppercase
@@ -99,12 +101,12 @@
 .goods_params-name
 	display: inline-block
 	text-align: left
-	padding: 4px 9px 4px 9px
+	padding: 3px 9px
 .goods_params-value
 	display: inline-block
 	text-align: right
 	font-weight: 600
-	padding: 4px 9px 4px 9px
+	padding: 3px 9px
 	svg
 		display: block
 		width: 55px
@@ -126,7 +128,6 @@
 	border-radius: 3px
 	padding: 10px
 	margin-bottom: 10px
-	cursor: pointer
 	&:hover
 		.goods_info-img
 			svg g path
@@ -180,6 +181,9 @@
 			text-decoration: none
 
 
+.goods_desc
+	font-size: 16px
+	line-height: 1.55
 
 .goods_doc-title
 	margin: 10px auto 30px auto
@@ -204,12 +208,15 @@
 	justify-content: flex-start
 	flex-wrap: wrap
 	margin-bottom: 50px
-.goods_doc-list
-	width: 50%
+.goods_doc-list	
 	padding-right: 20px
+	h4	
+		font-size: 16px
+		font-weight: 600
 	ul
 		padding-left: 0
-		font-size: 1em
+		font-size: 16px
+		line-height: 1.5
 	li
 		list-style: none
 		a
@@ -225,8 +232,11 @@
 		a:hover
 			color: $accent
 
-
-
+.goods_doc_info
+	font-size: 14px
+	font-style: italic
+	color: #777
+	margin-left: 7px
 
 .goods_doc-size
 	width: 50%

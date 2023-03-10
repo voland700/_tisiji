@@ -16,7 +16,8 @@
 	transition: all .25s ease
 	p 
 		font-style: italic
-		line-height: 1.35
+		font-size: 15px
+		line-height: 1.5
 	&:after 
 		content: ''
 		position: absolute
@@ -42,11 +43,13 @@
 
 .article-menu
 	width: 250px
+	font-size: 16px
+	line-height: 1.55
 .article-menu-title
 	text-transform: uppercase
-	font-size: 15px
+	font-size: 16px
 	color: $title
-	font-weight: 600
+	//font-weight: 600
 	margin: 0 0 11px
 	//padding: 0 20px
 	display: block
@@ -54,29 +57,49 @@
 	padding: 0
 	li
 		list-style: none
-		font-weight: 500
+		//font-weight: 500
 		margin-bottom: 5px
-	a 
-		padding: 0 
-		position: relative
-		color: $darck
-		transition: all .25s ease
-		i 
-			margin-right: 7px
-			font-weight: 600
-		&:hover
-			text-decoration: none
-			color: $accent
+.article-menu-link
+	padding: 0 
+	position: relative
+	color: $darck
+	transition: all .25s ease
+	i 
+		margin-right: 7px
+		font-weight: 600
+	&:hover
+		text-decoration: none
+		color: $accent
 
-
-
+.article-menu-link.active
+	text-decoration: none
+	color: $accent
+	text-decoration: underline	
+	i 
+		margin-right: 7px
+		font-weight: 600
 
 .article-content
 	flex-basis: 70%
 	flex-grow: 2
+
+	font-size: 16px
+	line-height: 1.55
+
 	img
 		border: 1px solid darken($body, 5%)
-		border-radius: 3px		
+		border-radius: 3px	
+	blockquote
+		padding-left: 35px
+		border-left: 5px solid $accent
+	h3 
+		font-size: 1.3rem
+		margin-bottom: 20px
+
+.article-content.page
+	font-size: 16px
+	line-height: 1.55
+	
 .article-list-img
 	display: block
 	position: relative
@@ -115,6 +138,12 @@
 	float: left
 	margin-right: 20px
 
+.article-img_link
+	.article-img,
+	.img-flex-2,
+	.img-flex-3
+		margin-bottom: 0
+
 .img-center-1
 	display: block
 	max-width: 500px
@@ -139,14 +168,65 @@
 	width: 300px
 
 
+.article-img_link
+	margin-bottom: 20px
+.article_one_img_link
+	display: block
+	width: 80%
+	border: 1px solid #e7e7e7
+	border-radius: 3px
+	overflow: hidden
+	margin: 20px auto
+.article_one_img
+	width: 100%
+
+.article_one_img_link_100
+	display: block
+	width: 100%
+	border: 1px solid #e7e7e7
+	border-radius: 3px
+	overflow: hidden
+	margin: 20px auto
+.article_one_img
+	width: 100%
 
 
 
 
 
+.article-item_block
+	display: flex
+	margin-bottom: 20px
+
+.article-right_img_link
+	display: inline-block
+	align-self: flex-start
+	width: 250px
+	border: 1px solid #e7e7e7
+	border-radius: 3px
+	margin-right: 20px
+	overflow: hidden
+
+.article-right_img
+	width: 100%
+.article-item_txt
+	width: calc( 100% - 270px )
 
 
+.article_video_80
+	width: 80%
+	border: 5px solid #e7e7e7
+	border-radius: 2px
+	margin: 0 auto 25px auto
+	
 
+
+.article_video_100
+	width: 100%
+	border: 5px solid #e7e7e7
+	border-radius: 2px
+	margin: 0 auto 25px auto
+	
 
 
 
@@ -167,6 +247,18 @@
 	.article-list-item
 		width: calc(50% - 20px)
 
+
+	.article-item_block
+		flex-wrap: wrap
+
+	.article-right_img_link
+		max-width: 350px
+		margin: 0 auto 20px auto
+
+	.article-item_txt
+		width: 100%
+
+
 // ≥576px
 +media-breakpoint-down(xs)
 
@@ -174,6 +266,8 @@
 	.article-img
 		float: none
 
+	.article_one_img_link
+		width: 100%
 
 @media only screen and (max-width : 400px)
 	.article-list-item
