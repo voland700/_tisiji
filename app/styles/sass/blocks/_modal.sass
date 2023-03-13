@@ -9,14 +9,7 @@
 .modal_form
 	width: 100%
 .modal_fild
-	margin-bottom: 15px
-	input
-		display: block
-		width: 100%
-		border: 1px solid #ccc
-		border-radius: 3px
-		overflow: hidden
-		padding: 5px
+	margin-bottom: 15px	
 	textarea
 		width: 100%
 		border: 1px solid #c6c6c6
@@ -25,6 +18,16 @@
 		font-size: 1.1em
 		font-style: italic
 		overflow: hidden
+
+.inp_name
+	display: block
+	width: 100%
+	border: 1px solid #ccc
+	border-radius: 3px
+	overflow: hidden
+	padding: 5px
+.inp_name.invalid
+	border-color: red	
 
 label
 	display: block
@@ -62,30 +65,6 @@ label
 	transition: background-color .25s ease
 	&:hover
 		background-color: $accent
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .modal
 	width: 100%

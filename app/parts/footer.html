@@ -1,25 +1,22 @@
-<div class="modal_wrap" id="  " style="display:none;max-width:450px;">
-	<form action="#" method="POST" class="modal_form">
+<div class="modal_wrap" id="modal" style="display:none;max-width:450px;">
+	<form action="#" method="POST" class="modal_form" id="modalForm">
 		<div class="modal_fild">
 			<label>Ваше имя<span class="req">*</span></label>
-			<input type="text" name="name" id="inpName" value="" required="" placeholder="Иван Иванович">
+			<input type="text" class="inp_name" name="name" id="inpName" value="" placeholder="Your name">
 			<span id="askNameValid" class="fild_massege"></span>
 		</div>
 		<div class="modal_fild">
 			<label>E-mail адрес<span class="req">*</span></label>
-			<input type="email" name="email" id="inpMail" value="">
-			<span id="askNameValid" class="fild_massege"></span>
+			<input type="email" class="inp_name" name="email" id="inpMail" value="" placeholder="E-mail">
+			<span id="askMailValid" class="fild_massege"></span>
 		</div>
 		<div class="modal_fild">
-			<label>Сообщение</label>
-			<textarea name="message" rows="5"></textarea>
+			<label>Вопрос</label>
+			<textarea name="message" rows="5" id="message"></textarea>
 		</div>
-		<input type="submit" name="submit" value="Отправить" class="modal_btn">
+		<input type="submit" name="submit" value="Отправить" class="modal_btn" id="modalBtn">
 	</form>
 </div>
-
-
-
 
 <footer>
 	<div class="container">
@@ -151,6 +148,7 @@
 </symbol>
 </svg>
 <script src="js/fancybox.umd.js"></script>
+<script src="js/sweetalert2.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

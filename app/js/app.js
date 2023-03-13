@@ -250,3 +250,116 @@ document.querySelectorAll('.hidden-link').forEach(function(elem){
 
 	});
 });
+
+
+document.getElementById('askBtn').addEventListener('click', function(event){
+	event.preventDefault();
+
+	const modal = document.getElementById('modal');
+	const modalForm = document.getElementById('modalForm');
+	const inpName = document.getElementById('inpName');
+	const inpMail = document.getElementById('inpMail');
+	const message = document.getElementById('message');
+	const modalBtn = document.getElementById('modalBtn');
+
+
+	const askNameValid = document.getElementById('askNameValid');
+	const askMailValid = document.getElementById('askMailValid');
+	
+	let valid = true;
+
+	Fancybox.show([{ src: modal, type: "html" }]);
+
+
+
+
+
+
+	inpName.onfocus = function () {			
+		if (this.classList.contains('invalid')) {
+			this.classList.remove('invalid');
+			askNameValid.innerText = "";
+			valid = true;
+		}		
+	};
+
+	inpMail.onfocus = function () {
+
+		console.log(askMailValid);		 
+		if (this.classList.contains('invalid')) {
+			this.classList.remove('invalid');
+			askMailValid.textContent = "";
+			valid = true;
+		}
+	};
+
+	 
+	modalBtn.addEventListener('click', function(e){
+		e.preventDefault();
+		const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+		if (inpName.value.trim() === '') {
+			if (!inpName.classList.contains('invalid')) inpName.classList.add('invalid');
+			askNameValid.innerText = 'Укажите Ваше имя';
+			valid = false;
+		}
+
+		if(reg.test(inpMail.value) == false) {
+			if(inpMail.value == ''){
+				if (!inpMail.classList.contains('invalid')) inpMail.classList.add('invalid');
+				askMailValid.textContent = 'Укажите Ваш E-mail адрес';
+				valid = false;
+			}	else {
+				if (!inpMail.classList.contains('invalid')) inpMail.classList.add('invalid');
+				askMailValid.textContent = 'Не корректный E-mail адрес';
+				valid = false;
+			}			
+		} 
+
+		if(valid) {			
+			 
+			setTimeout(Fancybox.close(), 1000);
+
+			setTimeout(
+				Swal.fire({
+					title:'Ваше сообщенеи получено!',
+					text: 'You clicked the button!',
+					icon: 'success',
+					timer: 3000,
+				}
+
+			  	), 2000);
+		}
+	});
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	//console.log(modal);
+
+
+
+
+});
+
+
+
